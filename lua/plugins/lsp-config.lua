@@ -18,17 +18,22 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.clangd.setup({
-        capabilities = capabilities
+      -- Forma moderna para Neovim 0.11+
+      vim.lsp.config("*", {
+        capabilities = capabilities,
       })
 
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.lsp.enable({ "lua_ls", "clangd" })
+
+      -- Keymaps via LspAttach (forma correta)
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(args)
+          local buf = args.buf
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = buf })
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = buf })
+          vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { buffer = buf })
+        end,
+      })
     end,
   },
 }
