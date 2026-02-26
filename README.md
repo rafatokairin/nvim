@@ -1,3 +1,5 @@
+## install NerdFonts JetBrains
+
 ## install ripgrep:
 
 ```
