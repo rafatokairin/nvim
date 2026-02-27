@@ -1,4 +1,72 @@
-## install NerdFonts JetBrains
+# Build env:
+
+## install nvim:
+```
+sudo add-apt-repository ppa:neovim-ppa/unstable
+```
+
+```
+sudo apt install neovim
+```
+
+git clone into: ~/.config/
+
+## basic cfg git:
+
+```
+ssh-keygen -t ed25519 -C "seu_email@example.com"
+```
+
+generate ssh key:
+
+```
+cat ~/.ssh/id_ed25519.pub
+```
+
+paste on ssh in git.
+
+## install zsh:
+
+```
+sudo apt install zsh
+```
+
+turn default zsh:
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+to install plugins, you must edit the ~/.zshrc file. Look for the plugins item (by default it's on line 73):
+
+```
+plugins=(copyfile copypath git sudo ubuntu z zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+change theme:
+
+```
+ZSH_THEME="agnoster"
+```
+
+## install nerdfonts:
+
+```
+# 1. create dir
+mkdir -p ~/.local/share/fonts
+
+# 2. install unzip
+sudo apt install unzip -y
+
+# 3. install JetBrainsMono
+curl -fLo ~/.local/share/fonts/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+
+# 4. unzip
+unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMono
+
+# 5. att cache
+fc-cache -fv
+```
 
 ## install ripgrep:
 
@@ -12,24 +80,6 @@ sudo apt install ripgrep
 sudo apt update
 
 sudo apt install build-essential
-```
-
-## cfg ssh git:
-
-```
-ssh-keygen -t ed25519 -C "seu-email@example.com"
-
-eval "$(ssh-agent -s)"
-
-ssh-add ~/.ssh/id_ed25519
-
-cat ~/.ssh/id_ed25519.pub
-```
-
-## link nvim:
-
-```
-sudo ln -s /opt/nvim/nvim /usr/local/bin/nvim
 ```
 
 ## install pynvim:
