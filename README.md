@@ -37,6 +37,14 @@ turn default zsh:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+install autosuggestions and syntax-highlighting:
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+
 to install plugins, you must edit the ~/.zshrc file. Look for the plugins item (by default it's on line 73):
 
 ```
