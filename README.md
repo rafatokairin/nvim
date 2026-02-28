@@ -1,5 +1,27 @@
 # Build env:
 
+## install ripgrep:
+
+```
+sudo apt install ripgrep
+```
+
+## install gcc:
+
+```
+sudo apt update
+
+sudo apt install build-essential
+```
+
+## install pynvim:
+
+```
+sudo apt install unzip
+
+sudo apt install python3-pynvim -y
+```
+
 ## install nvim:
 ```
 sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -76,28 +98,6 @@ unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMo
 fc-cache -fv
 ```
 
-## install ripgrep:
-
-```
-sudo apt install ripgrep
-```
-
-## install gcc:
-
-```
-sudo apt update
-
-sudo apt install build-essential
-```
-
-## install pynvim:
-
-```
-sudo apt install unzip
-
-sudo apt install python3-pynvim -y
-```
-
 ## cfg right button mousepad:
 
 ```
@@ -120,4 +120,26 @@ include "%L"
 echo "alias coderoot='sudo -E code --user-data-dir=/tmp/vscode-root --no-sandbox'" >> ~/.bashrc
 
 source ~/.bashrc
+```
+
+## install tmux
+
+## install ripgrep:
+
+```
+sudo apt install ripgrep
+```
+
+## install gcc:
+
+```
+sudo apt update
+
+sudo apt install build-essential
+```
+
+## install pynvim:
+
+```
+sudo apt install tmux
 ```
