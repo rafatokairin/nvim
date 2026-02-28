@@ -22,6 +22,11 @@ sudo apt install unzip
 sudo apt install python3-pynvim -y
 ```
 
+## install zellij
+```
+sudo apt install zellij
+```
+
 ## install nvim:
 ```
 sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -120,26 +125,4 @@ include "%L"
 echo "alias coderoot='sudo -E code --user-data-dir=/tmp/vscode-root --no-sandbox'" >> ~/.bashrc
 
 source ~/.bashrc
-```
-
-## install tmux
-
-## install ripgrep:
-
-```
-sudo apt install ripgrep
-```
-
-## install gcc:
-
-```
-sudo apt update
-
-sudo apt install build-essential
-```
-
-## install pynvim:
-
-```
-sudo apt install tmux
 ```
