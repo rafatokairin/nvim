@@ -22,9 +22,22 @@ sudo apt install unzip
 sudo apt install python3-pynvim -y
 ```
 
-## install zellij
+## install zellij:
+
 ```
 sudo snap install zellij --classic
+```
+
+add in /.zshrc:
+
+```
+export PATH=$PATH:/snap/bin
+```
+
+run:
+
+```
+source ~/.zshrc
 ```
 
 ## install nvim:
