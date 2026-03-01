@@ -24,7 +24,7 @@ sudo apt install python3-pynvim -y
 
 ## install zellij
 ```
-sudo apt install zellij
+sudo snap install zellij --classic
 ```
 
 ## install nvim:
