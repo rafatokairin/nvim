@@ -139,3 +139,12 @@ echo "alias coderoot='sudo -E code --user-data-dir=/tmp/vscode-root --no-sandbox
 
 source ~/.bashrc
 ```
+
+## install wezterm:
+
+```
+sudo apt update
+sudo apt install -y flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub org.wezfurlong.wezterm
+```
